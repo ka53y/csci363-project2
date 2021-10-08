@@ -22,7 +22,8 @@ Fixed_Array <T, N>::Fixed_Array (void)
 template <typename T, size_t N>
 Fixed_Array <T, N>::Fixed_Array (const Fixed_Array <T, N> & arr)
 {
-	
+    char* deepCopy = new char;
+    *deepCopy = *(data_);
 }
 
 //
@@ -83,5 +84,14 @@ template <typename T, size_t N>
 template <size_t M>
 const Fixed_Array <T, N> & Fixed_Array <T, N>::operator = (const Fixed_Array <T, M> & rhs)
 {
+    if (this != &rhs) {
+        //changed the iteration length to avoid the runtime error. 
+        for (size_t i = 0; i < sizeof(data_); i++)
+        {
+            data_[i] = rhs[i];
+        }
+    }
+
+    return *this;
 
 }
