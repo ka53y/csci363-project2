@@ -11,6 +11,11 @@
 template <typename T>
 Stack <T>::Stack (void)
 {
+    // COMMENT It appears as if you were using an raw C++ array to
+    // implement you stack, but failed to declare the member variables
+    // in the header file. You are to use your array class from assignment
+    // one to realize the stack.
+    
     data_ = nullptr;
     cur_size_ = 0;
     max_size_ = 0;
@@ -71,6 +76,9 @@ template <typename T>
 const Stack <T> & Stack <T>::operator = (const Stack & rhs)
 {
     if (this != &rhs) {
+        // COMMENT It would be easier if you just use the assignment operator
+        // on the array to copy things from rhs.
+        
         //changed the iteration length to avoid the runtime error. 
         for (size_t i = 0; i < sizeof(data_); i++)
         {
@@ -87,6 +95,9 @@ const Stack <T> & Stack <T>::operator = (const Stack & rhs)
 template <typename T>
 void Stack <T>::clear (void)
 {
+    // COMMENT Just reset the variables instead popping each element, which
+    // is expensive.
+
     for (size_t i = 0; i < track; i++)
     {
         data_[i] = NULL;

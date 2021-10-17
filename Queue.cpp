@@ -7,6 +7,13 @@
 
 #include <stdexcept>         // for std::out_of_bounds exception
 
+// COMMENT You are supposed to use your array class. No feedback
+// will be provided since the array class and raw C array result
+// in a completely different design.
+
+// COMMENT Your header file should not contain any implementation
+// code.
+
 //
 // Queue
 //

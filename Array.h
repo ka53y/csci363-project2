@@ -19,6 +19,9 @@
 
 #include <cstring>          // for size_t definition
 
+// COMMENT This array class should contain methods that change the size of the
+// array. The other methods should be moved to the base class.
+
 /**
  * @class Array
  *

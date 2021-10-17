@@ -15,6 +15,9 @@
 
 #include <exception>
 
+// COMMENT You are to use aggregation or inheritence to realize
+// the stack class. You do not use either.
+
 /**
  * @class Stack
  *
